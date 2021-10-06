@@ -2,7 +2,7 @@
 require_once 'config.php'; 
 
 const user_profile ='user_profile';
-if(isset($_COOKIE[user_profile])){
+if (isset($_COOKIE[user_profile])){
 $theme = $_COOKIE[user_profile];
 }
 else{
@@ -20,7 +20,7 @@ if ($theme === '2' ){
     FPLGlobal::$theme="fonce";
 }else{
     FPLGlobal::$theme="default";
-}
+};
 
 
 require_once 'views/_layout.php';

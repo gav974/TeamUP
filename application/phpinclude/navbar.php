@@ -112,9 +112,9 @@ $menu= json_decode($menu_json,NULL,100,JSON_OBJECT_AS_ARRAY);
 		</form>
 		<form class="form-inline my-2 my-lg-0" action="index.php" method="POST" >
 		<select  id="lst_theme" class="form-control" aria-label="choix du theme" name="lst_theme" onchange="this.form.submit()">
-				<option <?php $theme=='0'?"echo 'selected' ":"" ?> value="0">Thème</option>
-				<option <?php $theme=='1'?"echo 'selected' ":"" ?>value="1">Claire</option>
-				<option <?php $theme=='2'?"echo 'selected' ":"" ?> value="2">sombre</option>
+				<option <?php echo $theme=='0'?" selected ":"" ?> value="0">Thème</option>
+				<option <?php echo $theme=='1'?" selected ":"" ?>value="1">Claire</option>
+				<option <?php echo $theme=='2'?" selected ":"" ?> value="2">sombre</option>
 		</select>
 		</form>
 	</div>

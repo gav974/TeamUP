@@ -26,7 +26,7 @@ FPLGlobal::render_bundle_script();
         require_once 'phpinclude/navbar.php';        
         ?>
     </header>
-    <h1>BONJOUR LA TEAM c'est l'essai <span style="color:red;"> numero 2 with redirection</span></h1>
+    <h1 class="text-center">BONJOUR LA TEAM c'est l'essai <span style="color:red;"> numero 2 with redirection</span></h1>
 <section>
     <?php 
     require_once 'views/index_partial.php';

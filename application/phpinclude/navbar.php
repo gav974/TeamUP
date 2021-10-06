@@ -1,6 +1,6 @@
 <?php
-// menu (premiËre version)
-$menu = array();
+// menu (premiÔøΩre version)
+/*$menu = array();
 $menu[0] = array(
     "route" => "#",
     "label" => "Accueil",
@@ -42,7 +42,7 @@ $menu[6] = array(
     "label" => "Rapports",
     "tag" => "",
     "icon" => "analysis"
-);
+);*/
 
 // menu (seconde version)
 $menu_json=file_get_contents("menu.json", FILE_USE_INCLUDE_PATH);
@@ -109,6 +109,13 @@ $menu= json_decode($menu_json,NULL,100,JSON_OBJECT_AS_ARRAY);
 			<input class="form-control mr-sm-2" type="search"
 				placeholder="Rechercher" aria-label="Rechercher">
 			<button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+		</form>
+		<form class="form-inline my-2 my-lg-0" action="index.php" method="POST" >
+		<select  id="lst_theme" class="form-control" aria-label="choix du theme" name="lst_theme" onchange="this.form.submit()">
+				<option <?php $theme=='0'?"echo 'selected' ":"" ?> value="0">Th√®me</option>
+				<option <?php $theme=='1'?"echo 'selected' ":"" ?>value="1">Claire</option>
+				<option <?php $theme=='2'?"echo 'selected' ":"" ?> value="2">sombre</option>
+		</select>
 		</form>
 	</div>
 </nav>

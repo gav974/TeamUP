@@ -1,26 +1,26 @@
 <?php 
-require "../comfpl/main.php";
-?>
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <?php
-    require "../application/phpincludes/commonmeta.php";
-    require "../application/phpincludes/commoncss.php";
-    require "../application/phpincludes/theme.php";
-    require "../application/phpincludes/commonscript.php"; 
-    ?>
+require_once 'config.php'; 
 
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-<?php
-require "../application/phpincludes/navbar.php"
-?>
+const user_profile ='user_profile';
+if(isset($_COOKIE[user_profile])){
+$theme = $_COOKIE[user_profile];
+}
+else{
+    $theme= 0;
+};
 
-    <h1>Bienvenue</p>
-</body>
-</html>
+
+if ($_SERVER['REQUEST_METHOD'] === 'POST'){
+    $theme = $_POST['lst_theme'];
+//    $expiration = time()+(60*60);
+    setcookie(user_profile, $theme, time()+3600);
+};
+
+if ($theme === '2' ){
+    FPLGlobal::$theme="fonce";
+}else{
+    FPLGlobal::$theme="default";
+}
+
+
+require_once 'views/_layout.php';

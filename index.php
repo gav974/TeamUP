@@ -1,20 +1,16 @@
 <?php
-header("Location:application\index.php"); /* Redirection du navigateur */
+header ('location:application/index.php'); 
+?>;
 
-/* Redirection de la page  */
-exit;
-?>
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Team Up</title>
+    <title>teamup <?php echo date("d,m,Y"); ?>t</title>
 </head>
-
 <body>
-
-    <h1>Bienvenue dans Team Up</h1>
+    <h1>BONJOUR LA TEAM c'est l'essai <span style="color:red;"> numero 2</span></h1>
 </body>
 </html>

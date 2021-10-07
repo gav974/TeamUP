@@ -18,7 +18,20 @@ FPLGlobal::render_bundle_script();
 <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>teamup <?php echo date("d/m/Y"); ?></title>
+    <title>teamup 
+        <?php echo date("d/m/Y");
+            if(isset($theme)){
+                if ($theme=='0'){
+                echo " theme normal";
+                };
+                if($theme=='1'){
+                echo "theme claire";
+                };
+                if($theme=='2'){
+                echo "theme sombre";    
+                };
+            }; ?>
+    </title>
 </head>
 <body>
     <header>

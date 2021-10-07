@@ -2,8 +2,19 @@
 /*
  * config.php
  * (C) 2019 BAG
- * Fichier de configuration général
+ * Fichier de configuration gï¿½nï¿½ral
  */
+// donnÃ©es de connexion serveur 
+ $cx_server ='localhost';
+$cx_login ='app_teamup';
+$cx_pwd ='F4xA!q*k/U6j#G9';
+$cx_dbname='teamup';
+
+function get_default_connexion()
+{
+    global $cx_server,$cx_login,$cx_pwd,$cx_dbname;
+}
+
     require_once '../comfpl/main.php';
     FPLGlobal::$theme="default";
     FPLGlobal::$default_route="home-home-index.do";
